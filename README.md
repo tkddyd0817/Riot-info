@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Project Title
+: LOL INFO 웹페이지
 
-First, run the development server:
+![메인](https://github.com/user-attachments/assets/28108078-1e04-42db-9e48-01db00caf11e)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.# 사용한 라이브러리
+🛠 Skills
+Next.js,Typescript,React,Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. ## **메인페이지, 레이아웃 구성 및 네비게이션 추가**
+   ### **페이지 설정 및 메인 페이지 구현**
+- 경로: `/`
+- 기능: 앱의 홈 페이지로, 주요 링크와 간단한 소개를 제공합니다.
+- 렌더링 방식: **Static Site Generation (SSG)**
+    - 빌드 시점에 페이지를 정적으로 생성합니다.
+- 글로벌 레이아웃을 설정하고 네비게이션 메뉴를 추가하여 페이지 간 이동이 가능하도록 합니다.
+- 챔피언 목록, 아이템 목록, 로테이션 정보 페이지로 이동할 수 있는 링크를 제공합니다.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+3. ## 챔피언 목록 페이지 구현
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **페이지 설정**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+ 경로: `/champions`
+ 기능: 모든 챔피언의 목록을 표시합니다.
+ 렌더링 방식: **Incremental Static Regeneration (ISR)**
+재검증 시간(`revalidate`): **하루(86400초)**
+챔피언 데이터는 자주 변경되지 않으므로 ISR을 사용하여 성능을 최적화합니다.
+  
+각 챔피언의 이름과 썸네일 이미지를 표시합니다.
+각 챔피언을 클릭하면 해당 챔피언의 상세 페이지로 이동합니다.
 
-## Deploy on Vercel
+4. ## 챔피언 상세 페이지 구현
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **페이지 설정**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ 경로: `/champions/[id]`
+기능: 특정 챔피언의 상세 정보를 표시합니다.
+
+- 서버 컴포넌트로 작성하여 서버 사이드에서 데이터를 가져옵니다.
+- 챔피언의 이름, 타이틀, 이미지, 설명 등을 표시합니다.
+- 메타데이터를 설정하여 SEO를 향상시킵니다.
+
+
+5. 챔피언 로테이션 페이지 구현
+
+### **페이지 설정**
+
+- 경로: `/rotation`
+- 기능: 현재 무료로 플레이 가능한 챔피언들을 표시합니다.
+- 렌더링 방식: **클라이언트 사이드 렌더링 (CSR)**
+- 클라이언트에서 데이터를 가져와 렌더링합니다.
+
+- **클라이언트 컴포넌트**로 작성하여 클라이언트 사이드에서    데이터를 가져옵니다.
+- 챔피언 목록과 동일한 방식으로 챔피언들을 표시합니다.
+
+
+
+
+6. 챔피언 상세 페이지 구현
+글로벌 레이아웃을 설정하고, 네비게이션 메뉴를 추가하여 페이지 간 이동이 가능하도록 합니다. 
+
+
+
+
+
+
+
+
+7. 챔피언 상세 페이지 구현
+사용자의 UX향상및 흥미를 위해 3초마다 메인화면이 바뀌는 슬라이드
+기능 구현
+
+
+
+
+
+
+
+
+ 8. 챔피언 상세 페이지 구현
+사용자의 UX 부분의 향상을 위해서 웹페이지 분위기에 맞는 배경음악을
+재생 및 정지 다음곡으로 넘길수 있는 기능을 합니다
