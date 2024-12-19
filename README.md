@@ -2,6 +2,10 @@
 # Project Title
 : LOL INFO 웹페이지
 
+![메인](https://github.com/user-attachments/assets/28108078-1e04-42db-9e48-01db00caf11e)
+
+
+
 1.# 사용한 라이브러리
 🛠 Skills
 Next.js,Typescript,React,Tailwind CSS
