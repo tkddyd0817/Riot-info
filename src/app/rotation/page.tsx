@@ -5,7 +5,7 @@ import { Champion } from "@/types/Champion";
 import { ChampionRotations } from "@/types/ChampionRotation";
 import { getChampionRotation } from "@/utils/rotationApi";
 import { useQuery } from "@tanstack/react-query";
-import IsLoading from "../isLoading";
+import IsLoading from "../IsLoading";
 import { Suspense } from "react";
 
 type RotationProps = {
