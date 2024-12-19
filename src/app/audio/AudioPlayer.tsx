@@ -24,27 +24,25 @@ const AudioPlayer = () => {
   };
 
   return (
-    <div >
+    <div>
       <audio
-        className="  text-red-500 "
         ref={audioRef}
         src={tracks[currentTrack]}
         onError={(e) => console.error("Audio error:", e)}
         onEnded={handleEnded}
-        // controls
       />
-      <div className="flex items-center justify-center p-20 text-red-500">
+      <div className="flex items-center justify-center p-10 text-red-500 mx-auto">
         <button className="text-red-500 text-2xl font-bold mx-2" onClick={play}>
           ▶️
         </button>
         <button
-          className="text-red-500 text-2xl font-bold mx-2"
+          className="text-red-500 text-2xl font-bold mx-auto"
           onClick={pause}
         >
           ⏸️
         </button>
         <button
-          className="text-red-500 text-2xl font-bold mx-2"
+          className="text-red-500 text-2xl font-bold mx-auto"
           onClick={nextTrack}
         >
           ⏭️

@@ -41,7 +41,7 @@ export default function RootLayout({
                       className="p-20 text-red-500 text-2xl font-bold"
                       href="/champions"
                     >
-                      champions
+                      Champions
                     </Link>
 
                     <div className="flex items-center">
@@ -52,14 +52,14 @@ export default function RootLayout({
                       className="p-20 text-red-500 text-2xl font-bold"
                       href="/items"
                     >
-                      items
+                      Items
                     </Link>
 
                     <Link
                       className="p-20 text-red-500 text-2xl font-bold"
                       href="/rotation"
                     >
-                      rotation
+                      Rotation
                     </Link>
 
                     <div className="flex items-center">

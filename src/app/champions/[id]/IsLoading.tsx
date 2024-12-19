@@ -3,8 +3,8 @@ import React from "react";
 
 const IsLoading = () => {
   return (
-    <div>
-      <h2 className="mx-auto text-2xl text-red-500 font-bold">
+    <div className="flex flex-col items-center justify-center mx-auto">
+      <h2 className="text-2xl text-red-500 font-bold mb-4">
         로딩 중입니다.....
       </h2>
       <Image
