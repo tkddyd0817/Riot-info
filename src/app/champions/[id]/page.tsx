@@ -10,8 +10,8 @@ interface ChampionDetailProps {
     id: string;
   };
 }
-
-export async function DetailMetadata({
+//동적인 메타데이터 를쓸떄는  generateMetadata
+export async function generateMetadata({
   params,
 }: ChampionDetailProps): Promise<Metadata> {
   const champion = await fetchChampiondetails(params.id);
