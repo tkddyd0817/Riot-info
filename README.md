@@ -2,15 +2,9 @@
 # Project Title
 : LOL INFO 웹페이지
 
-# 사용한 라이브러리
+1.# 사용한 라이브러리
 🛠 Skills
 Next.js,Typescript,React,Tailwind CSS
-
-
-
-. 1프로젝트 셋업 및 기본 구조 구성
-Next.js와 TypeScript를 사용하여 프로젝트를 생성하고, Tailwind CSS를 설치합니다.
-src/ 디렉토리와 @/* import alias를 설정하여 프로젝트 구조를 정리합니다.
 
 2. ## **메인페이지, 레이아웃 구성 및 네비게이션 추가**
    ### **페이지 설정 및 메인 페이지 구현**
