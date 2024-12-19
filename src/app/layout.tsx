@@ -26,7 +26,7 @@ export default function RootLayout({
         <Providers>
           <header className="  border border-gray flex items-center bg-[#020b17] fiexd top-50 bottom-50 w-full z-50 shadow hover:shadow-ig">
             <div>
-              <nav className="container  mx-auto flex justify-around gap-8">
+              <nav className="container  mx-auto flex justify-around ">
                 <div>
                   <nav className="container  mx-auto flex items-center justify-around">
                     <AudioPlayer />

@@ -41,11 +41,8 @@ const ThemeToggle: React.FC = () => {
   }, [isDarkMode]);
 
   return (
-    <button
-      className="bg-custom-dark p-4 text-red-500  text-2xl font-bold"
-      onClick={toggleTheme}
-    >
-      {isDarkMode ? "White Mode" : "Dark Mode"}
+    <button className="p-4  text-4xl font-bold" onClick={toggleTheme}>
+      {isDarkMode ? "☀️" : "🌙"}
     </button>
   );
 };

@@ -19,7 +19,11 @@ export default function RotationPage() {
   });
   console.log(data);
   if (isPending) {
-    return <IsLoading />;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <IsLoading />
+      </div>
+    );
   }
   // 데이터가 성공적으로 로드되었을 경우 구조 분해
   const { allPlayers, newPlayers } = data as RotationProps;

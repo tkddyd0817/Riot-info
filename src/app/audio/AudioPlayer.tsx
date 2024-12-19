@@ -24,14 +24,14 @@ const AudioPlayer = () => {
   };
 
   return (
-    <div>
+    <div className="pr-10">
       <audio
         ref={audioRef}
         src={tracks[currentTrack]}
         onError={(e) => console.error("Audio error:", e)}
         onEnded={handleEnded}
       />
-      <div className="flex items-center justify-center p-10 text-red-500 mx-auto">
+      <div className="flex items-center justify-center  p-10 text-red-500 mx-auto">
         <button className="text-red-500 text-2xl font-bold mx-2" onClick={play}>
           ▶️
         </button>
