@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { ChampionRotations } from "@/types/ChampionRotation";
-
 const ApiKey = process.env.NEXT_PUBLIC_RIOT_API_KEY as string; // API 환경변수
 const BaseURL = "https://kr.api.riotgames.com/lol/platform/v3";
 

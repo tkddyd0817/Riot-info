@@ -2,11 +2,9 @@
 import ChampionCard from "@/components/ChampionCard";
 import ScrollToTopButton from "@/components/src/components/ScrollToTopButton";
 import { Champion } from "@/types/Champion";
-import { ChampionRotations } from "@/types/ChampionRotation";
 import { getChampionRotation } from "@/utils/rotationApi";
 import { useQuery } from "@tanstack/react-query";
 import IsLoading from "../IsLoading";
-import { Suspense } from "react";
 
 type RotationProps = {
   allPlayers: Champion[];
@@ -21,11 +19,7 @@ export default function RotationPage() {
   });
   console.log(data);
   if (isPending) {
-    return (
-      <div>
-        <IsLoading />
-      </div>
-    );
+    return <IsLoading />;
   }
   // 데이터가 성공적으로 로드되었을 경우 구조 분해
   const { allPlayers, newPlayers } = data as RotationProps;
