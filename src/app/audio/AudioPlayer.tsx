@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 const AudioPlayer = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [currentTrack, setCurrentTrack] = useState<number>(0);
-  const tracks = ["../public/Sample.mp3"];
+  const tracks = ["/Sample.mp3", "/Sample2.mp3"];
 
   const play = (): void => {
     audioRef.current?.play();
@@ -24,18 +24,31 @@ const AudioPlayer = () => {
   };
 
   return (
-    <div>
+    <div >
       <audio
-        className="bg-red-500"
+        className="  text-red-500 "
         ref={audioRef}
         src={tracks[currentTrack]}
+        onError={(e) => console.error("Audio error:", e)}
         onEnded={handleEnded}
-        controls
+        // controls
       />
-      <div>
-        <button className="bg-red-500" onClick={play}></button>
-        <button className="bg-red-500" onClick={pause}></button>
-        <button className="bg-red-500" onClick={nextTrack}></button>
+      <div className="flex items-center justify-center p-20 text-red-500">
+        <button className="text-red-500 text-2xl font-bold mx-2" onClick={play}>
+          ▶️
+        </button>
+        <button
+          className="text-red-500 text-2xl font-bold mx-2"
+          onClick={pause}
+        >
+          ⏸️
+        </button>
+        <button
+          className="text-red-500 text-2xl font-bold mx-2"
+          onClick={nextTrack}
+        >
+          ⏭️
+        </button>
       </div>
     </div>
   );
